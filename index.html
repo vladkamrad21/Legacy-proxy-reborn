@@ -1,62 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <style>
+        /* Styling for the login form */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #ececec;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
-        .container {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px 35px;
             border-radius: 8px;
-            width: 300px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+            width: 400px;
         }
-        form {
-            display: flex;
-            flex-direction: column;
+        .login-container h2 {
+            margin-bottom: 25px;
+            color: #333333;
+            text-align: center;
         }
-        label, input, button {
-            margin: 10px 0;
+        .login-container label {
+            margin-bottom: 8px;
+            display: block;
+            color: #555555;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            background: #f9f9f9;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 14px;
+            background-color: #007acc;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .login-container button:hover {
+            background-color: #006bb3;
+        }
+        .error-message {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            text-align: center;
         }
     </style>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="loginUsername">Username:</label>
-            <input type="text" id="loginUsername" required>
-            <label for="loginPassword">Password:</label>
-            <input type="password" id="loginPassword" required>
-            <button type="button" onclick="login()">Login</button>
-        </form>
-        
-        <h2>Register</h2>
-        <form id="registerForm">
-            <label for="registerUsername">Username:</label>
-            <input type="text" id="registerUsername" required>
-            <label for="registerPassword">Password:</label>
-            <input type="password" id="registerPassword" required>
-            <button type="button" onclick="register()">Register</button>
-        </form>
-
-        <h2>Recover Password</h2>
-        <form id="recoverForm">
-            <label for="recoverUsername">Username:</label>
-            <input type="text" id="recoverUsername" required>
-            <button type="button" onclick="recoverPassword()">Recover</button>
+    <div class="login-container">
+        <h2>User Login</h2>
+        <form onsubmit="validate(event);">
+            <div id="error" class="error-message"></div>
+            <label for="username">Username</label>
+            <input type="text" id="username" required placeholder="Enter your username">
+            <label for="password">Password</label>
+            <input type="password" id="password" required placeholder="Enter your password">
+            <button type="submit">Login</button>
         </form>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
