@@ -16,3 +16,8 @@ body {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZOL3E2lis55kJJiYK0eCDjEK9WhoSLnWj9w&s");
     background-size:90%
   }
+a.element {
+    vertical-align: bottom;
+    Color:rgba(255, 208, 0, 0.795); 
+    text-size-adjust: 100%;
+  }
