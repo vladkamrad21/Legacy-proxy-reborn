@@ -14,7 +14,7 @@
             { username: 'Vladkamrad', password: '9865' },
             { username: 'Waylan', password: '1478' },
             { username: 'Sid', password: '4569' },
-            { username: 'undefined', password: '0950' }
+            { username: '1', password: '1' }
         ];
 
         // Check if the input matches any of the predefined credentials
@@ -29,6 +29,6 @@
         } else {
             // If credentials are incorrect
             const errorMsg = document.getElementById('error'); 
-            errorMsg.textContent = 'Invalid username or password. Please try again.';
+            errorMsg.textContent = 'User is invalid (litterally)';
         }
     }
