@@ -25,7 +25,7 @@
         if (user) {
             // If credentials are correct
             alert(`you are logged in as a goofy goober`); 
-            window.location.href = '19871345uhwbbfjj123jfhj5hg.html';
+            window.location.href = 'Welcome1.html';
         } else {
             // If credentials are incorrect
             const errorMsg = document.getElementById('error'); 
